@@ -48,6 +48,9 @@
             <a href="{{ url('/route_priority/user') }}" class="list-group-item list-group-item-action">
                 Route Priority
             </a>
+            <a href="{{ url('/asdqwezxc') }}" class="list-group-item list-group-item-action">
+                Fallback Routes
+            </a>
         </div>
 
         <h6 class="mt-4">Route Groups (Route Prefixes & Route Name Prefixes)</h6>
