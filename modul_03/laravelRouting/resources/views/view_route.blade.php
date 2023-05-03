@@ -10,7 +10,7 @@
 <body>
     <div class="container m-5">
         <h1>This is from View Route</h1>
-        <p>Hello, My name is {{ $nama }}</p>
+        <p>Hello, My name is {{ $name }}</p>
     </div>
     @vite('resources/js/app.js')
 </body>

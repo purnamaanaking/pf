@@ -36,7 +36,7 @@ Route::get('/basic_routing', function() {
 
 // View Route
 Route::view('/view_route', 'view_route');
-Route::view('/view_route', 'view_route', ['nama' => 'Purnama']);
+Route::view('/view_route', 'view_route', ['name' => 'Purnama']);
 
 // Controller Route
 Route::get('/controller_route', [RouteController::class, 'index']);
