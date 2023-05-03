@@ -11,7 +11,7 @@ class RouteController extends Controller
         return "This is from Controller";
     }
 
-    public function profile() {
-        return "This is Profile from Controller";
+    public function profile($profileId) {
+        return "This is Profile from Controller, profile id: ".$profileId;
     }
 }

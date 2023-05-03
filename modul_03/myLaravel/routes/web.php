@@ -14,8 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/bootstrap_clone', function () {
+// Welcome
+Route::get('/welcome', function () {
     return view('welcome');
+});
+
+// Bootstrap Clone
+Route::get('/bootstrap_clone', function () {
+    return view('bootstrap_clone');
 });
 
 // Halaman Belajar Laravel Routing
@@ -30,7 +36,7 @@ Route::get('/basic_routing', function() {
 
 // View Route
 Route::view('/view_route', 'view_route');
-Route::view('/view_route', 'view_route', ['name' => 'Purnama']);
+Route::view('/view_route', 'view_route', ['nama' => 'Purnama']);
 
 // Controller Route
 Route::get('/controller_route', [RouteController::class, 'index']);
@@ -47,7 +53,7 @@ Route::get('/posts/{post}/comments/{comment}', function($postId, $commentId) {
 });
 
 // Route Parameter (Optional Parameter)
-Route::get('username/{name?}', function($name = null) {
+Route::get('username/{name?}', function($name = 'Purnama') {
     return 'Username: '.$name;
 });
 
@@ -57,10 +63,10 @@ Route::get('/title/{title}', function($title) {
 })->where('title', '[A-Za-z]+');
 
 // Named Route
-Route::get('/profile/{profileId}', [RouteController::class, 'profile'])->name('profile');
+Route::get('/profile/{profileId}', [RouteController::class, 'profile'])->name('profileRouteName');
 
 // Route Groups (Route Prefixes & Route Name Prefixes)
-Route::prefix('admin')->name('admin.')->group(function() {
+Route::prefix('/admin')->name('admin.')->group(function() {
     Route::get('/dashboard', function() {
         return "This is admin dashboard";
     })->name('dashboard');

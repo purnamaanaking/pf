@@ -42,7 +42,7 @@
             <a href="{{ url('/title/this-is-my-title') }}" class="list-group-item list-group-item-action">
                 Route With Regular Expression Constraints
             </a>
-            <a href="{{ route('profile', ['profileId' => '123']) }}" class="list-group-item list-group-item-action">
+            <a href="{{ route('profileRouteName', ['profileId' => '123456']) }}" class="list-group-item list-group-item-action">
                 Named Route
             </a>
             <a href="{{ url('/route_priority/user') }}" class="list-group-item list-group-item-action">

@@ -1,9 +1,3 @@
-// Fonts
-// @import url("https://fonts.bunny.net/css?family=Nunito");
-
-// Variables
-// @import "variables";
-
 // Bootstrap
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
@@ -12,20 +6,22 @@
     background-color: #7533f9 !important;
 }
 
-#main a {
-    color: gray;
+#main {
+    a {
+        color: gray;
+        &:hover {
+            color: rgb(73, 73, 73);
+        }
+    }
 }
 
-#main a:hover {
-    color: rgb(73, 73, 73);
-}
-
-#footer a {
-    text-decoration: none;
-    color: black;
-}
-
-#footer a:hover {
-    text-decoration: underline;
-    color: var(--bs-primary) !important;
+#footer {
+    a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+            text-decoration: underline;
+            color: var(--bs-primary) !important;
+        }
+    }
 }
