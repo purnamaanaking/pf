@@ -176,7 +176,7 @@
                     </a>
                 </div>
                 <div class="col-lg-6">
-                    <img class="img-fluid" src="{{ Vite::asset('/resources/images/bs-themes.png') }}" alt="Bootstrap Themes">
+                    <img class="img-fluid" src="{{ Vite::asset('resources/images/bs-themes.png') }}" alt="Bootstrap Themes">
                 </div>
             </div>
         </div>
