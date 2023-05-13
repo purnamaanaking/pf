@@ -31,7 +31,7 @@
         </div>
     </nav>
 
-    <div class="container-sm mt-5">
+    <div class="container-sm my-5">
         <form action="{{ route('employees.store') }}" method="POST">
             @csrf
             <div class="row justify-content-center">
@@ -77,6 +77,17 @@
                             <label for="age" class="form-label">Age</label>
                             <input class="form-control @error('age') is-invalid @enderror" type="text" name="age" id="age" value="{{ old('age') }}" placeholder="Enter Age">
                             @error('age')
+                                <div class="text-danger"><small>{{ $message }}</small></div>
+                            @enderror
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="position" class="form-label">Position</label>
+                            <select name="position" id="position" class="form-select">
+                                @foreach ($positions as $position)
+                                    <option value="{{ $position->id }}" {{ old('position') == $position->id ? 'selected' : '' }}>{{ $position->code.' - '.$position->name }}</option>
+                                @endforeach
+                            </select>
+                            @error('position')
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror
                         </div>
