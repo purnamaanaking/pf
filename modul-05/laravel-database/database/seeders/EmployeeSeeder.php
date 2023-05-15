@@ -18,16 +18,23 @@ class EmployeeSeeder extends Seeder
                 'firstname' => 'Purnama',
                 'lastname' => 'Anaking',
                 'email'=> 'purnama.anaking@gmail.com',
-                'age' => '30',
+                'age' => 20,
                 'position_id' => 1
             ],
             [
-                'firstname' => 'Yupit',
-                'lastname' => 'Sudianto',
-                'email'=> 'yupit.sudianto@gmail.com',
-                'age' => '31',
+                'firstname' => 'Adzanil',
+                'lastname' => 'Rachmadhi',
+                'email'=> 'adzanil.rachmadhi@gmail.com',
+                'age' => 25,
+                'position_id' => 2
+            ],
+            [
+                'firstname' => 'Berlian',
+                'lastname' => 'Rahmy',
+                'email'=> 'berlian.rahmy@gmail.com',
+                'age' => 23,
                 'position_id' => 3
-            ]
+            ],
         ]);
     }
 }
