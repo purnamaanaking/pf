@@ -22,7 +22,7 @@ class EmployeeController extends Controller
             left join positions on employees.position_id = positions.id
         ');
 
-        // Query Builder
+        // QUERY BUILDER
         // $employees = DB::table('employees')
         //     ->select('*', 'employees.id as employee_id')
         //     ->leftJoin('positions', 'employees.position_id', 'positions.id')
@@ -44,7 +44,7 @@ class EmployeeController extends Controller
         // RAW SQL Query
         $positions = DB::select('select * from positions');
 
-        // Query Builder
+        // QUERY BUILDER
         // $positions = DB::table('positions')->get();
 
         return view('employee.create', compact('pageTitle', 'positions'));
