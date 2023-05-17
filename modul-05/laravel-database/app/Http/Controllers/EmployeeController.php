@@ -17,7 +17,7 @@ class EmployeeController extends Controller
 
         // RAW SQL QUERY
         $employees = DB::select('
-            select *, employees.id as employee_id
+            select *, employees.id as employee_id, positions.name as position_name
             from employees
             left join positions on employees.position_id = positions.id
         ');
