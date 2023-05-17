@@ -37,16 +37,6 @@
             @method('put')
             <div class="row justify-content-center">
                 <div class="p-5 bg-light rounded-3 col-xl-6">
-
-                    {{-- @if ($errors->any())
-                        @foreach ($errors->all() as $error)
-                            <div class="alert alert-danger alert-dismissible fade show">
-                               {{ $error }}
-                               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        @endforeach
-                    @endif --}}
-
                     <div class="mb-3 text-center">
                         <i class="bi-person-circle fs-1"></i>
                         <h4>Edit Employee</h4>
