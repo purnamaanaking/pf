@@ -63,7 +63,7 @@
                             <label for="cv" class="form-label">Curriculum Vitae (CV)</label>
                             @if ($employee->original_filename)
                                 <h5>{{ $employee->original_filename }}</h5>
-                                <a href="{{ route('employees.downloadFile', ['employeeId' => $employee->id]) }}" class="btn btn-outline-dark btn-sm">
+                                <a href="{{ route('employees.downloadFile', ['employeeId' => $employee->id]) }}" class="btn btn-primary btn-sm">
                                     <i class="bi bi-download me-1"></i> Download
                                 </a>
                             @else
