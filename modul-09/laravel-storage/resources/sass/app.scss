@@ -1,0 +1,9 @@
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+#navbarDropdown {
+    .btn, .btn.show {
+        border-color: transparent;
+    }
+}
