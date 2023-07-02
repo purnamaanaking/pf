@@ -67,7 +67,7 @@
                                     <i class="bi bi-download me-1"></i> Download
                                 </a>
                             @else
-                                <h5>Tidak ada</h5>
+                                <h5>None</h5>
                             @endif
                             <input type="file" class="form-control mt-3" name="cv" id="cv">
                         </div>

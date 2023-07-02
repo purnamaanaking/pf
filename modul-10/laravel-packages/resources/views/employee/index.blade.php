@@ -14,9 +14,11 @@
         </div>
         <hr>
         <div class="table-responsive border p-3 rounded-3 mb-5">
-            <table class="table table-bordered table-hover table-striped mb-0 bg-white">
+            <table class="table table-bordered table-hover table-striped mb-0 bg-white" id="employeeTable">
                 <thead>
                     <tr>
+                        <th>ID</th>
+                        <th>No.</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>
@@ -25,20 +27,35 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
-                    @foreach ($employees as $employee)
-                        <tr>
-                            <td>{{ $employee->firstname }}</td>
-                            <td>{{ $employee->lastname }}</td>
-                            <td>{{ $employee->email }}</td>
-                            <td>{{ $employee->age }}</td>
-                            <td>{{ $employee->position->name }}</td>
-                            <td>@include('employee.actions')</td>
-                        </tr>
-                    @endforeach
-                </tbody>
             </table>
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script type="module">
+        $(document).ready(function() {
+            $("#employeeTable").DataTable({
+                serverSide: true,
+                processing: true,
+                ajax: "/getEmployees",
+                columns: [
+                    { data: "id", name: "id", visible: false },
+                    { data: "DT_RowIndex", name: "DT_RowIndex", orderable: false, searchable: false },
+                    { data: "firstname", name: "firstname" },
+                    { data: "lastname", name: "lastname" },
+                    { data: "email", name: "email" },
+                    { data: "age", name: "age" },
+                    { data: "position.name", name: "position.name" },
+                    { data: "actions", name: "actions", orderable: false, searchable: false },
+                ],
+                order: [[0, "desc"]],
+                lengthMenu: [
+                    [10, 25, 50, 100, -1],
+                    [10, 25, 50, 100, "All"],
+                ],
+            });
+        });
+    </script>
+@endpush
 

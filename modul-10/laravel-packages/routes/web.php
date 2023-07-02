@@ -32,6 +32,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', ProfileController::class)->name('profile');
     Route::resource('/employees', EmployeeController::class);
     Route::get('download-file/{employeeId}', [EmployeeController::class, 'downloadFile'])->name('employees.downloadFile');
+    Route::get('getEmployees', [EmployeeController::class, 'getData'])->name('employees.getData');
 });
 
 Route::get('/local-disk', function() {
