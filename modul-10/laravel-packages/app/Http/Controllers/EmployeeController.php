@@ -227,7 +227,7 @@ class EmployeeController extends Controller
         return Excel::download(new EmployeesExport, 'employees.xlsx');
     }
 
-    public static function exportPdf()
+    public function exportPdf()
     {
         $employees = Employee::all();
 
