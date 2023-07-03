@@ -33,6 +33,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/employees', EmployeeController::class);
     Route::get('download-file/{employeeId}', [EmployeeController::class, 'downloadFile'])->name('employees.downloadFile');
     Route::get('getEmployees', [EmployeeController::class, 'getData'])->name('employees.getData');
+    Route::get('exportExcel', [EmployeeController::class, 'exportExcel'])->name('employees.exportExcel');
+    Route::get('exportPdf', [EmployeeController::class, 'exportPdf'])->name('employees.exportPdf');
 });
 
 Route::get('/local-disk', function() {
