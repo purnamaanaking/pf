@@ -2,8 +2,22 @@
 @import 'bootstrap/scss/bootstrap';
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
+// DataTables
+@import "datatables.net-bs5/css/dataTables.bootstrap5.css";
+@import "datatables.net-buttons-bs5/css/buttons.bootstrap5.css";
+
 #navbarDropdown {
     .btn, .btn.show {
         border-color: transparent;
     }
 }
+
+.swal2-styled.swal2-confirm {
+    background-color: #0E6EFD !important;
+}
+
+.swal2-styled.swal2-confirm:focus {
+    box-shadow: 0 0 0 3px rgb(123 179 247 / 50%) !important;
+}
+
+
