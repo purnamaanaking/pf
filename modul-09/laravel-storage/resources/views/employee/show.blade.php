@@ -38,7 +38,7 @@
                                 <i class="bi bi-download me-1"></i> Download CV
                             </a>
                         @else
-                            <h5>Tidak ada</h5>
+                            <h5>None</h5>
                         @endif
                     </div>
                 </div>
