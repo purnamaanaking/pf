@@ -12,3 +12,5 @@
 - Modul 08: Laravel Authentication
 - Modul 09: Eloquent Factories & File Storage
 - Modul 10: Laravel Third Party Package
+
+Silakan merujuk ke: https://github.com/purnamaanaking/pf/wiki
